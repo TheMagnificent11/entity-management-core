@@ -8,7 +8,7 @@
     <Authors>Saji Weerasingham</Authors>
     <Company>NA</Company>
     <Product>EntityManagement.Abstractions</Product>
-    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <DocumentationFile>bin\netstandard2.0\EntityManagment.Abstractions.xml</DocumentationFile>
     <EmbedUntrackedSources>true</EmbedUntrackedSources>
