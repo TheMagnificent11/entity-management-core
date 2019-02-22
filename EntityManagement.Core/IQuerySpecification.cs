@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq.Expressions;
 
-namespace EntityManagement.Abstractions
+namespace EntityManagement.Core
 {
     /// <summary>
     /// Query Specification Interface

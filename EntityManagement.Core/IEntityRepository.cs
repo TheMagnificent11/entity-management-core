@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace EntityManagement.Abstractions
+namespace EntityManagement.Core
 {
     /// <summary>
     /// Entity Repository Interface
