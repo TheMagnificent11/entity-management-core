@@ -2,8 +2,8 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <PackageProjectUrl>https://github.com/TheMagnificent11/entity-management-abstractions</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/TheMagnificent11/entity-management-abstractions.git</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/TheMagnificent11/entity-management-core</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/TheMagnificent11/entity-management-core.git</RepositoryUrl>
     <PublishRepositoryUrl>true</PublishRepositoryUrl>
     <Authors>Saji Weerasingham</Authors>
     <Company>NA</Company>
