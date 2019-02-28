@@ -12,11 +12,11 @@ namespace EntityManagement.Core
         /// <summary>
         /// Gets or sets the ID of the enum entity
         /// </summary>
-        public TKey Id { get; protected set; }
+        public TKey Id { get; set; }
 
         /// <summary>
         /// Gets or sets the name of the enum entity
         /// </summary>
-        public string Name { get; protected set; }
+        public string Name { get; set; }
     }
 }
