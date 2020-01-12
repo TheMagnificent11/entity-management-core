@@ -42,14 +42,14 @@ namespace EntityManagement.Core
             var userName = Thread.CurrentPrincipal?.Identity?.Name ?? "System";
             var now = DateTime.UtcNow;
 
-            if (string.IsNullOrEmpty(CreatedBy))
+            if (string.IsNullOrEmpty(this.CreatedBy))
             {
-                CreatedBy = userName;
-                CreatedAtUtc = now;
+                this.CreatedBy = userName;
+                this.CreatedAtUtc = now;
             }
 
-            ModifiedBy = userName;
-            ModifiedAtUtc = now;
+            this.ModifiedBy = userName;
+            this.ModifiedAtUtc = now;
         }
     }
 }
