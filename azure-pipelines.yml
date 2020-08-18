@@ -3,9 +3,6 @@
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
 
-trigger:
-- master
-
 pool:
   vmImage: 'windows-latest'
 
@@ -32,10 +29,3 @@ steps:
     packagesToPack: EntityManagement.Core/EntityManagement.Core.csproj
     configuration: release
     versioningScheme: byBuildNumber
-- task: NuGetCommand@2
-  displayName: 'NuGet push'
-  inputs:
-    command: push
-    nuGetFeedType: external
-    publishFeedCredentials: NuGet
-  condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/master'))
