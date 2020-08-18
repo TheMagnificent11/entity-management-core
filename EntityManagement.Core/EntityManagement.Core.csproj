@@ -1,13 +1,13 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <TargetFramework>netstandard2.1</TargetFramework>
     <PackageProjectUrl>https://github.com/TheMagnificent11/entity-management-core</PackageProjectUrl>
     <RepositoryUrl>https://github.com/TheMagnificent11/entity-management-core.git</RepositoryUrl>
     <PublishRepositoryUrl>true</PublishRepositoryUrl>
     <Authors>Saji Weerasingham</Authors>
     <Company>NA</Company>
-    <Product>EntityManagement.Abstractions</Product>
+    <Product>EntityManagement.Core</Product>
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <DocumentationFile>bin\netstandard2.0\EntityManagment.Abstractions.xml</DocumentationFile>
@@ -18,12 +18,12 @@
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
     <WarningsAsErrors />
     <CodeAnalysisRuleSet>..\CodeAnalysis.ruleset</CodeAnalysisRuleSet>
-    <LangVersion>7.3</LangVersion>
+    <LangVersion>8.0</LangVersion>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="FluentValidation" Version="8.6.2" />
-    <PackageReference Include="Microsoft.CodeAnalysis.FxCopAnalyzers" Version="2.9.8">
+    <PackageReference Include="FluentValidation" Version="9.1.2" />
+    <PackageReference Include="Microsoft.CodeAnalysis.FxCopAnalyzers" Version="3.3.0">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
     </PackageReference>
