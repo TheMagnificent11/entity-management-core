@@ -39,3 +39,4 @@ jobs:
         PROJECT_FILE_PATH: EntityManagement.Core/EntityManagement.Core.csproj
         VERSION_STATIC: $GITVERSION_SEMVER 
         NUGET_KEY: ${{ secrets.NUGET_API_KEY }}
+      if: ${{ github.ref == 'refs/heads/master' }}
