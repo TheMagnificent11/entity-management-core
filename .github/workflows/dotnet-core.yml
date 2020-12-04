@@ -25,9 +25,6 @@ jobs:
       with:
         useConfigFile: true
         configFilePath: GitVersion.yml
-    - name: Display SemVer
-      run: |
-        echo "SemVer: $GITVERSION_SEMVER"
     - name: Setup .NET Core
       uses: actions/setup-dotnet@v1
       with:
@@ -36,5 +33,9 @@ jobs:
       run: dotnet restore
     - name: Build
       run: dotnet build --configuration Release --no-restore
-    - name: Pack
-      run: dotnet pack --configuration Release --no-restore --include-symbols --output ./output
+    - name: Publish to NuGet
+      uses: brandedoutcast/publish-nuget@v2.5.5
+      with:
+        PROJECT_FILE_PATH: EntityManagement.Core/EntityManagement.Core.csproj
+        VERSION_STATIC: $GITVERSION_SEMVER 
+        NUGET_KEY: ${{ secrets.NUGET_API_KEY }}
