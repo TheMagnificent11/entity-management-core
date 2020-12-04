@@ -1,6 +1,7 @@
 name: .NET Core
 
 on:
+  workflow_dispatch:
   push:
     branches: [ develop, master ]
   pull_request:
@@ -24,14 +25,18 @@ jobs:
       with:
         useConfigFile: true
         configFilePath: GitVersion.yml
-    - name: Display SemVer
-      run: |
-        echo "SemVer: $GITVERSION_SEMVER"
     - name: Setup .NET Core
       uses: actions/setup-dotnet@v1
       with:
-        dotnet-version: 3.1.301
+        dotnet-version: 5.0.100
     - name: Install dependencies
       run: dotnet restore
     - name: Build
       run: dotnet build --configuration Release --no-restore
+    - name: Publish to NuGet
+      uses: brandedoutcast/publish-nuget@v2.5.5
+      with:
+        PROJECT_FILE_PATH: EntityManagement.Core/EntityManagement.Core.csproj
+        VERSION_STATIC: $GITVERSION_SEMVER 
+        NUGET_KEY: ${{ secrets.NUGET_API_KEY }}
+      if: ${{ github.ref == 'refs/heads/master' }}
