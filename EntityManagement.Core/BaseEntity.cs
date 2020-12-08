@@ -35,6 +35,11 @@ namespace EntityManagement.Core
         public DateTime ModifiedAtUtc { get; private set; }
 
         /// <summary>
+        /// Gets or sets the timestamp
+        /// </summary>
+        public byte[] Timestamp { get; protected set; }
+
+        /// <summary>
         /// Applies the tracking data
         /// </summary>
         public void ApplyTrackingData()
