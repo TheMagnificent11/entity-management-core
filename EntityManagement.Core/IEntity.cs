@@ -32,5 +32,10 @@ namespace EntityManagement.Core
         /// Gets the date-time in UTC at which the entity was last updated
         /// </summary>
         DateTime ModifiedAtUtc { get; }
+
+        /// <summary>
+        /// Gets the timestamp
+        /// </summary>
+        byte[] Timestamp { get; }
     }
 }
